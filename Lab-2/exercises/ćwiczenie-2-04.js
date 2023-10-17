@@ -7,7 +7,16 @@
  */
 
 function longestWord(sentence){
-    //kod funkcji
+    
+    if(!sentence){
+        return "";
+    }
+    
+    let wordsArray = sentence.split(' ');
+    let longestWord = wordsArray.filter(word => word.length > wordsArray[0].length );
+
+    return longestWord[0];
+
 }
 
 
