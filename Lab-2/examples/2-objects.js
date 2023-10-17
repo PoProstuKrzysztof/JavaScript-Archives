@@ -98,3 +98,5 @@ let person = {
 }
 person.firstName = "łukasz";
 console.log(person.firstName);
+
+

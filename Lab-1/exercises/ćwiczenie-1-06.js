@@ -15,7 +15,23 @@ let rectWidth = 7;
 let rectHeight = 5;
 let rectBorderSymbol = '#';
 let rectString = '';
-/*
-    Wpisz kod zadania w miejscu tego komentarza.
-*/
+
+if(rectBorderSymbol == null && rectBorderSymbol == undefined){
+    console.log("Wrong character");
+}
+
+if((rectWidth || rectHeight) <= -1 || (rectWidth || rectHeight) >= 81 || rectBorderSymbol == '\n' || rectBorderSymbol == '\t' )
+{
+    console.log("Wrong data");
+}
+
+rectString += rectBorderSymbol.repeat(rectWidth) +"\n";
+    for(let i = 2; i < rectHeight; i++)
+    {
+        rectString += rectBorderSymbol + " ".repeat(rectWidth-2) + rectBorderSymbol +"\n"; 
+    }
+    rectString += rectBorderSymbol.repeat(rectWidth);
+
+
+
 console.log(rectString);

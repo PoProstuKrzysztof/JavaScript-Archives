@@ -13,14 +13,18 @@ function selectItems(arr, filter) {
     }
     return result;
 }
+
+let filter1 = name => name.length ===3;
+let filter2 = name => name[0] === "A";
+
 /**
  * Uzupełnij poniższe wywołania funkcji selectItems o drugi parametr funkcyjny, aby
  * - otrzymać tablicę imion o długości 3 znaków
  * - otrzymać tablicę imion zaczynających się literą A 
  */
 let names = ["Adam", "Ewa", "Karol", "Robert", "Franciszek", "Ala", "Tom", "Arkadiusz"];
-let threeLetersNames = selectItems(names);         //dodaj drugi arguemnt
-let startsWithANames = selectItems(names);         //dodaj drugi argument
+let threeLetersNames = selectItems(names, filter1);         //dodaj drugi arguemnt
+let startsWithANames = selectItems(names, filter2);         //dodaj drugi argument
 
 
 //Testy

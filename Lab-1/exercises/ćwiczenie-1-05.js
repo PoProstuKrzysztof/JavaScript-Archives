@@ -9,9 +9,26 @@
  * |################################                  |
  * 0 %                      75%                    100%
  */
-let n = 34;
+console.log("Zadanie 5\n----------------------------------")
+let n = 50;
 let m = 190;
-let progressBar = ""
+let progressBar = "|"
+ let percentageFromNumber = Math.round((n/m) * 100);
+ let spaces = '';
+
+ for(let i =0; i <=50; i++){
+    if(i < percentageFromNumber/2){
+        progressBar += '#';
+    }
+    else if(i == 50){
+        break;
+    }
+    else{
+        progressBar += ' ';
+    }
+    
+ }
+ progressBar += (`|\n0%                      ${percentageFromNumber}%                     100%`);
 /*
     Wpisz kod zadania w miejscu tego komentarza.
 */

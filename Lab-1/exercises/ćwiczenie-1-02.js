@@ -12,9 +12,16 @@
  * height = 0
  * height = 10
  */
+console.log("Zadanie 2\n----------------------------------")
 let height = 5;
-let triangle = '';
+let triangle = '#';
+
+for(let i = 1; i <= height; i++)
+{
+    console.log(triangle.repeat(i))
+}
+
+
 /*
     Wpisz kod zadania w miejscu tego komentarza.
-*/
-console.log(triangle);
+    */

@@ -6,7 +6,9 @@
  * radius()                 -> []
  */
 function radius(){
-    //kod funkcji
+    for(let i in arguments){
+        
+    }
 }
 /**
  * Testy. Nic nie zmieniaj!!!
