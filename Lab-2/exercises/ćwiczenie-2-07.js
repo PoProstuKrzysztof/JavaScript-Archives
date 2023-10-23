@@ -6,8 +6,16 @@
  */
 let tank = {
     capacity: 100,
-    _level: 10,             //pole na którym działają getter i setter level
-    //dodaj setter i getter o nazwie 'level'
+    _level: 10,              //pole na którym działają getter i setter level  
+    get level(){
+        return `${this._level} l`;
+    },
+    set level(value){
+        if(value > 0 && value <= 100){
+            this._level = value ;
+        }
+    }
+                            //dodaj setter i getter o nazwie 'level'
 }
 console.log(tank.level);    //powinien powjaiwć się napis "10 l"
 tank.level = 20;

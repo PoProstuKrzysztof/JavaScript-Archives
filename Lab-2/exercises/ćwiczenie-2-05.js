@@ -1,7 +1,7 @@
 /**
  * Dodaj jedną instrukcję w wierszu 17, która spowoduje, że obiekt audi będzie miał właściwości weight i mileage 
  */
-
+let audi = new Car("A4", "Audi", 190);
 function Vehicle(){
     return {
         weight: 1000,
@@ -14,11 +14,11 @@ function Car(model, brand, power){
     this.brand = brand;
     this.power = power;
 };
-
+audi.mileage =0; audi.weight = 0;
 //zamień ten komentarz na instrukcję zgodnie z poleceniem
 
 //Testy
-let audi = new Car("A4", "Audi", 190);
+
 if ("weight" in audi){
     console.log("Test 51 passed")
 } else {

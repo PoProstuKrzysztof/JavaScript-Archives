@@ -5,11 +5,7 @@
  * radius(4, 2, -2, "a")    -> [1.1283791670955126, 0.7978845608028654, NaN, NaN] 
  * radius()                 -> []
  */
-function radius(){
-    for(let i in arguments){
-        
-    }
-}
+
 /**
  * Testy. Nic nie zmieniaj!!!
  */
@@ -39,3 +35,11 @@ if (result instanceof Array
     console.log("Test 13 failed!")
 }
 
+function radius(){
+    let arrayOfRadius= new Array();
+    for(let i = 0; i< arguments.length;i++){
+        arrayOfRadius.push(Math.sqrt(arguments[i]/Math.PI));
+    }
+
+    return arrayOfRadius;
+}

@@ -15,8 +15,18 @@
  * console.log(car.mileage);            //stan licznika: 100
  */
 function Car(weight, model, power){
-    //kod funkcji
-}
+    
+        this.weight = weight,
+        this.model=  model,
+        this.power= power,
+        this.mileage = 0,
+        this.drive = function(speed, time){
+            if(time > 0 && speed > 0)
+            this.mileage =  speed * time;
+        }
+
+    
+};
 
 //Testy
 let car = new Car(1000, "BMW A4", 200);
