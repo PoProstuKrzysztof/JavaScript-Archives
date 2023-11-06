@@ -2,8 +2,14 @@
  * Zdefiniuj funkcję, która generuje kolejne liczby parzyste większę lub równe `n` i mniejsze lub równe `m`.
  */
 
-function *evenNumbers(n, m){
-    
+function* evenNumbers(n, m) {
+    if (n % 2 === 1) {
+        n++; 
+    }
+
+    for (let num = n; num <= m; num += 2) {
+        yield num;
+    }
 }
 
 let sum = 0;

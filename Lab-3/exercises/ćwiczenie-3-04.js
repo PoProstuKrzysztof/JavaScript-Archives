@@ -14,7 +14,21 @@
 
 
 function parseStudents(input) {
-    
+    if (!input) return []; 
+
+    const lines = input.split('\n'); 
+
+    const students = lines
+        .map(line => line.split('\t')) 
+        .filter(columns => columns.length === 3) 
+        .map(columns => ({
+            name: columns[0],
+            ects: parseInt(columns[1]),
+            active: columns[2].includes('aktywny') ? true : false
+        }))
+        .filter(student => student.name && student.name.length <= 25 && !isNaN(student.ects) && student.ects >= 0 && student.ects <= 200 && typeof student.active === 'boolean');
+
+    return students;
 }
 
 const studentLines = "Adam\t123\taktywny\nEwa\t34\tnieaktywna\nRoman\t56\taktywny\nKazik\t-34\taktyw\nBogdan\tfalse";
