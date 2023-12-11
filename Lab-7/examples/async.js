@@ -27,3 +27,4 @@ console.log("Second call of async delayedAction");
 delayedAction(1000, () => 10)
 .then(value => console.log("Promise 2 (then): Resolved with " + value))
 .catch(error => console.log("Promise 2 (catch): Reject with " + error));
+

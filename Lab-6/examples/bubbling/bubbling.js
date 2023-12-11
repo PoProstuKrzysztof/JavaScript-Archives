@@ -17,6 +17,8 @@ btn1.addEventListener('click', event => {
     event.target.style.background = '#00FF00';
     event.stopPropagation();                                //ta metoda zatrzymuje propagowanie zdarzenia
 });
+
+
 /**
  * Obsługa zdarzenia 'click' przypisana jest do kontenera div, który zawiera dwa przyciski i paragraf.
  * Każdy z elementów potomnych też obsługuje to zdarzenie.

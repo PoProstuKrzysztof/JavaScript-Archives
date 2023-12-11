@@ -8,6 +8,18 @@
  */
 function frequences(str){
 
+    const result = new Map();
+    for(const letter of str){
+        if(!result.has(letter)){
+            result.set(letter, 1);
+        }
+        else{
+             const currentValue = result.get(letter);
+             result.set(letter, currentValue +1);
+        }
+    }
+
+    return result;
 }
 
 try{

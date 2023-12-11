@@ -10,7 +10,18 @@
  */
 
 function union(a1, a2){
+    const setA1 = new Set(a1);
+    const commonWords = new Set();
+
+    for (const item of a2) {
+        if (setA1.has(item)) {
+            commonWords.add(item);
+        }
+    }
+
+    return commonWords;  
 }
+
 
 const a1 = [...Array(100_000).keys()];
 const a2 = [...Array(100_000).fill(100_001)];
